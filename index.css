@@ -1,0 +1,37 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    border: 0;
+}
+
+body {
+    font-family: "Poppins", sans-serif;
+}
+
+table {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+
+table thead th {
+    padding: 10px 40px 4px 40px;
+}
+
+table thead tr {
+    border-bottom: 1px solid rgba(0, 0, 0, .1);
+}
+
+table tbody td {
+    text-align: center;
+}
+
+table tbody tr td {
+    padding-top: 14px;
+}
+
+table tbody tr:first-of-type td {
+    padding-top: 20px;
+}

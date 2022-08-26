@@ -35,3 +35,24 @@ table tbody tr td {
 table tbody tr:first-of-type td {
     padding-top: 20px;
 }
+
+.button_container {
+    position: absolute;
+    top: 6%;
+    right: 6%;
+}
+
+.button_container a {
+    text-decoration: none;
+    color: white;
+    padding: 10px 24px;
+    background-color: rgb(28, 107, 211);
+    border-radius: 4px;
+    transition: .4s;
+}
+
+.button_container a:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: rgb(27, 97, 189);
+
+}

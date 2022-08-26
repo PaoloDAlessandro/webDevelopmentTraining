@@ -1,0 +1,56 @@
+form {
+    display: flex;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -54%);
+    flex-direction: column;
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 40px 20px;
+    border: 1px solid rgba(0, 0, 0, 0.2);
+    border-radius: 16px;
+    box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+}
+
+form .input_container label {
+    width: 200px;
+    margin-bottom: 2px;
+}
+
+form .input_container input {
+    width: 400px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    padding: 12px 6px;
+    outline: none;
+    border-radius: 2px;
+    font-family: 'Poppins', sans-serif;
+    font-size: 14px;
+
+}
+
+.input_container {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+}
+
+form button {
+    width: fit-content;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 8px 16px;
+    font-family: 'Poppins', sans-serif;
+    background-color: rgb(28, 107, 211);
+    border-radius: 4px;
+    color: white;
+}
+
+.message_error {
+    margin: 0;
+    height: 0;
+    font-size: 12px;
+    color: #E06C66;
+    font-weight: 500;
+}

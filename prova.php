@@ -41,6 +41,10 @@
             echo '</tbody></table>';
         }
     ?>
+
+    <div class="button_container">
+        <a href="addUser.php">add user</a>
+    </div>
     
 </body>
 </html>

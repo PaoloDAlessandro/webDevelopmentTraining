@@ -14,7 +14,7 @@
     include "config.php";
 ?>
 
-<form action="insertUser.php" method="POST">
+<form action="insertUser.php" id="userForm" method="POST">
     <div class="input_container" id="input_container_name">
         <label for="name">Name:</label>
         <input type="text" placeholder="Your name" name="name" id="input_name" autocomplete="disable">
@@ -25,9 +25,9 @@
         <input type="text" placeholder="Your surname" name="surname" id="input_surname" autocomplete="disable">
     </div>
 
-    <div class="input_container">
+    <div class="input_container" id="input_container_username">
         <label for="name">Username:</label>
-        <input type="text" placeholder="Your username" name="username" autocomplete="disable">
+        <input type="text" placeholder="Your username" name="username" id="input_username" autocomplete="disable">
     </div>
 
     <div class="input_container">
@@ -35,12 +35,12 @@
         <input type="number" placeholder="Your age" name="age" autocomplete="disable" min="14" max="120">
     </div>
 
-    <div class="input_container">
+    <div class="input_container" id="input_container_email">
         <label for="name">Email:</label>
-        <input type="text" placeholder="Your email" name="email" autocomplete="disable">
+        <input type="text" placeholder="Your email" id="input_email" name="email" autocomplete="disable">
     </div>
     
-    <button type="submit">add user</button>
+    <button type="button" onclick="inputChecker()">add user</button>
 </form>
 
 <div class="button_container">

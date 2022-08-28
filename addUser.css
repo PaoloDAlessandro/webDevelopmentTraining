@@ -12,6 +12,7 @@ form {
     border: 1px solid rgba(0, 0, 0, 0.2);
     border-radius: 16px;
     box-shadow: rgba(0, 0, 0, 0.04) 0px 3px 5px;
+    background-color: white;
 }
 
 form .input_container label {
@@ -45,6 +46,10 @@ form button {
     background-color: rgb(28, 107, 211);
     border-radius: 4px;
     color: white;
+}
+
+#userForm button:hover {
+    cursor: pointer;
 }
 
 .message_error {

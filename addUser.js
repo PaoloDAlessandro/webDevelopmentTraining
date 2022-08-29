@@ -83,6 +83,7 @@ function input_username_checker() {
 
     
     if((input_username.value.length < 2 || input_username.value.length > 30) && input_username_error_counter == 0) {
+        
         var input_username_error_p = document.createElement("p");
         var input_username_error = document.createTextNode("Username must be between 2 and 24 characters");
         input_username_error_p.setAttribute("id", "input_username_error");
@@ -116,31 +117,10 @@ input_email.addEventListener("input", function() {
 
 function input_email_checker() {
 
-    
-    if((input_email.value.length < 2 || input_email.value.length > 30) && input_email_error_counter == 0) {
-        var input_email_error_p = document.createElement("p");
-        var input_email_error = document.createTextNode("email must be between 2 and 24 characters");
-        input_email_error_p.setAttribute("id", "input_email_error");
-        input_email_error_p.classList.add("message_error");
-        input_email_error_p.appendChild(input_email_error);
-        input_container_email.appendChild(input_email_error_p);
-      
-        input_email_error_counter++;
-    }
-    
-    else if(!(input_email.value.length < 2 || input_email.value.length > 30)) {
-      
-        if (input_email_error_counter > 0) {
-      
-            input_email_error_counter--;
-            document.getElementById("input_email_error").remove();
-        }
-    }
-
-    if (input_email.value.search("@") == -1) {
+    if (input_email.value.search("@") == -1 && input_email_error_counter == 0) {
 
         var input_email_error_p = document.createElement("p");
-        var input_email_error = document.createTextNode("email must have '@' to be valid");
+        var input_email_error = document.createTextNode("Email must have '@' to be valid");
         input_email_error_p.setAttribute("id", "input_email_error");
         input_email_error_p.classList.add("message_error");
         input_email_error_p.appendChild(input_email_error);
@@ -149,14 +129,36 @@ function input_email_checker() {
         input_email_error_counter++;
     }
 
-    else if(!(input_email.value.search("@") == -1)) {
-      
+    else if(!(input_email.value.search("@") == -1) && !(input_email.value.length < 6 || input_email.value.length > 30)) {
+        
         if (input_email_error_counter > 0) {
-      
-            input_email_error_counter--;
+        
+            input_email_error_counter = 0
             document.getElementById("input_email_error").remove();
         }
     }
+    
+    if((input_email.value.length < 6 || input_email.value.length > 30) && input_email_error_counter == 0) {
+     
+        var input_email_error_p = document.createElement("p");
+        var input_email_error = document.createTextNode("Email must be between 6 and 24 characters");
+        input_email_error_p.setAttribute("id", "input_email_error");
+        input_email_error_p.classList.add("message_error");
+        input_email_error_p.appendChild(input_email_error);
+        input_container_email.appendChild(input_email_error_p);
+      
+        input_email_error_counter++;
+    }
+    
+    else if(!(input_email.value.length < 6 || input_email.value.length > 30) && !(input_email.value.search("@") == -1)) {
+      
+        if (input_email_error_counter > 0) {
+      
+            input_email_error_counter = 0;
+            document.getElementById("input_email_error").remove();
+        }
+    }
+
 }
 
 
@@ -165,8 +167,10 @@ function inputChecker() {
     input_name_checker();
     input_surname_checker();
     input_username_checker();
+    input_email_checker();
 
-    if (input_name_error_counter == 0 && input_surname_error_counter == 0 && input_username_error_counter == 0) {
+    if (input_name_error_counter == 0 && input_surname_error_counter == 0 && input_username_error_counter == 0 && input_email_error_counter == 0) {
+        
         document.getElementById("userForm").submit();
     }
 }

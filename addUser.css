@@ -59,3 +59,7 @@ form button {
     color: #E06C66;
     font-weight: 500;
 }
+
+.input_container:last-of-type {
+    margin-bottom: 30px;
+}

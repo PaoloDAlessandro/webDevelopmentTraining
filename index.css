@@ -28,8 +28,12 @@ table tbody td {
     text-align: center;
 }
 
+table tbody tr:hover {
+    background-color: rgb(236, 236, 236);
+}
+
 table tbody tr td {
-    padding-top: 14px;
+    padding: 7px 0;
 }
 
 table tbody tr:first-of-type td {

@@ -40,7 +40,7 @@
         <input type="text" placeholder="Your email" id="input_email" name="email" autocomplete="disable">
     </div>
     
-    <button type="button" onclick="inputChecker()">add user</button>
+    <button type="button" onclick="addUserInputChecker()">add user</button>
 </form>
 
 <div class="button_container">
@@ -48,7 +48,7 @@
     </div>
     
 
-<script src="addUser.js"></script>
+<script src="formInputChecker.js"></script>
 
 </body>
 </html>

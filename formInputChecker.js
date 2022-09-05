@@ -203,5 +203,10 @@ function loginInputChecker() {
 }
 
 
+document.getElementsByTagName("body")[0].addEventListener('keypress', function(e){
+    if (e.key == "Enter") {
+        addUserInputChecker();
+    }
+});
 
 
